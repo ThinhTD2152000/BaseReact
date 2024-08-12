@@ -20,68 +20,11 @@ const HomePage = () => {
         zoom: 13,
       });
 
-      const filter = new window.wemapgl.WeFilterControl({
-        filters: {
-          cuisine: {
-            text: "Ẩm thực",
-            "fa-icon": "fa-cutlery",
-            color: "#C70039",
-            featureClasses: ["cafe", "restaurant", "fast_food", "food_court"],
-            layers: ["poi-level-1", "poi-level-2", "poi-level-3"],
-          },
-          hotel: {
-            text: "Nhà nghỉ",
-            "fa-icon": "fa-hotel",
-            color: "#C70039",
-            featureClasses: ["hotel", "guest_house", "motel"],
-            layers: ["poi-level-1", "poi-level-2", "poi-level-3"],
-          },
-          entertainment: {
-            text: "Giải trí",
-            "fa-icon": "fa-glass",
-            color: "#C70039",
-            featureClasses: [
-              "bar",
-              "nightclub",
-              "pub",
-              "theatre",
-              "casino",
-              "cinema",
-            ],
-            layers: ["poi-level-1", "poi-level-2", "poi-level-3"],
-          },
-          shopping: {
-            text: "Mua sắm",
-            "fa-icon": "fa-shopping-bag",
-            color: "#C70039",
-            featureClasses: [
-              "shop",
-              "grocery",
-              "alcohol_shop",
-              "jewelry",
-              "mall",
-              "supermarket",
-              "fashion",
-              "convenience",
-              "marketplace",
-            ],
-            layers: ["poi-level-1", "poi-level-2", "poi-level-3"],
-          },
-        },
-      });
-
-      var geocoder = new window.wemapgl.WeGeocoder({
-        flyTo: "hybrid",
+      const directions = new window.wemapgl.WeDirections({
         key: "zZjAMHCwZAHTQqXIvigmZOXNiI",
-        engine: "default",
-        suggestion: {
-          min_char: 4,
-        },
       });
-      // thêm vào bản đồ
-      map.addControl(geocoder);
       // thêm plugin vào bản đồ
-      map.addControl(filter, "top-left");
+      map.addControl(directions, "top-left");
     } catch (error) {
       console.error(error);
     }
