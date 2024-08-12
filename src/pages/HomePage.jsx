@@ -82,6 +82,9 @@ const HomePage = () => {
       map.addControl(geocoder);
       // thêm plugin vào bản đồ
       map.addControl(filter, "top-left");
+      document.getElementById("wemap-close-detail-button").onclick = () => {
+        document.getElementById("wemap-detail-feature").style;
+      };
     } catch (error) {
       console.error(error);
     }
