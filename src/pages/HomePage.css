@@ -1,1 +1,31 @@
 @import 'https://js.arcgis.com/4.26/@arcgis/core/assets/esri/themes/light/main.css';
+
+#wefilter-section {
+    z-index: -1;
+}
+
+#wefilter-button-section{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px;
+}
+
+.wefilter-button {
+    cursor: pointer;
+}
+
+#directions-items {
+    border-top: 1px solid rgb(204, 203, 203);
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    margin-top: 5px;
+    padding: 10px 20px;
+}
+.directions-item{
+    display: flex !important;
+    flex-direction: column;
+}
+.directions-control {
+    background-color: white;
+}

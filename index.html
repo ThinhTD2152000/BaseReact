@@ -3,11 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" href="/favicon.ico" />
-    <link
-      rel="template-creator"
-      type="text/html"
-      href="https://github.com/buildingwatsize"
-    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       href="https://wemap-project.github.io/WeMap-Web-SDK-Release/assets/css/wemap.min.css"
@@ -23,10 +18,17 @@
       content="vite, react, tailwind, antd, template, boilerplate, buildingwatsize, vite-react-tailwind-antd"
     />
     <meta name="description" content="REPLACE_WITH_YOUR_PROJECT_DESCRIPTION" />
-    <title>REPLACE_WITH_YOUR_PROJECT_NAME</title>
+    <title>BASE REACT</title>
+    <script src="/wemap-gl.js"></script>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      const button = document.getElementById("wefilter-button-entertainment");
+      button.addEventListener("click", () => {
+        console.log(button.getAttribute("title"));
+      });
+    </script>
   </body>
 </html>
